@@ -28,18 +28,18 @@ sleep 10
 ##############################################################################
 		wget "$_APK_SERVER" # path to downloaded and server or locally stored .apk files
 		wget "$_APK_SERVER" # path to downloaded and server or locally stored .png background image if desired
-                
-# Script for downloading designated apk files and images for installation on 
+
+# Script for downloading designated apk files and images for installation on
 # multiple devices to be deployed
 for device in `adb devices | grep -v "List" | sed -e "s/\t.*$//"`;
 do
-		
+
 	echo "Installing app to $device";
 		adb -s $device install /home/"FIXME"/APK_assets/"FIXME"; # Specify the path and the .apk file name
-     
+
 	echo "pushing background PNG to $device's Download folder";
 		adb -s $device push /home/"FIXME"/APK_assets/"FIXME" /mnt/sdcard/Download/; # Specify the path and .png file name if background image is wanted
-     
+
 done
 
 ##############################################################################
