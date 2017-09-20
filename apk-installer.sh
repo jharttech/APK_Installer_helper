@@ -6,8 +6,16 @@ _APK_SERVER="FIXME"
 _VERSION="20150929-1"
 ##############################################################################
 # Display running script Version Number
-echo "Running mg_apk_script "$_VERSION""
+clear
+echo "############################################################################"
+cat jhart_shell_logo.txt
 
+echo -e '\n'
+echo "############################################################################"
+echo -e '\n'
+echo "Running mg_apk_script "$_VERSION""
+echo -e '\n'
+echo "############################################################################"
 # Changing Directory for verification of paths
 cd ~/
 
